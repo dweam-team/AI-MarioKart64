@@ -4,7 +4,7 @@ import numpy as np
 import pygame
 from PIL import Image
 
-from csgo.action_processing import CSGOAction
+from ..csgo.action_processing import CSGOAction
 from .dataset_env import DatasetEnv
 from .play_env import PlayEnv
 

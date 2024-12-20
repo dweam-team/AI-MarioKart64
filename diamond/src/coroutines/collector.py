@@ -7,10 +7,10 @@ import torch.nn as nn
 from tqdm import tqdm
 
 from . import coroutine
-from data import Episode, Dataset
-from envs import TorchEnv
+from ..data import Episode, Dataset
+from ..envs import TorchEnv
 from .env_loop import make_env_loop
-from utils import Logs
+from ..utils import Logs
 
 
 @coroutine

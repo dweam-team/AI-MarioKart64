@@ -3,7 +3,7 @@ from typing import Any, Dict, List, Tuple
 import torch
 from torch import Tensor
 
-from data import Dataset
+from ..data import Dataset
 
 
 class DatasetEnv:

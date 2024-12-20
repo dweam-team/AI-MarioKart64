@@ -7,11 +7,11 @@ from typing import Any, Dict, List, Tuple
 import torch
 from torch import Tensor
 
-from agent import Agent
-from csgo.action_processing import CSGOAction, decode_csgo_action, encode_csgo_action, print_csgo_action
-from csgo.keymap import CSGO_KEYMAP
-from data import Dataset, Episode
-from envs import WorldModelEnv
+from ..agent import Agent
+from ..csgo.action_processing import CSGOAction, decode_csgo_action, encode_csgo_action, print_csgo_action
+from ..csgo.keymap import CSGO_KEYMAP
+from ..data import Dataset, Episode
+from ..envs import WorldModelEnv
 import pygame
 
 

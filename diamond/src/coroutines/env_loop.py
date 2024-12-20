@@ -6,7 +6,7 @@ import torch.nn as nn
 from torch.distributions.categorical import Categorical
 
 from . import coroutine
-from envs import TorchEnv, WorldModelEnv
+from ..envs import TorchEnv, WorldModelEnv
 
 
 @coroutine

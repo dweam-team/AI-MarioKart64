@@ -13,11 +13,11 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm, trange
 import wandb
 
-from agent import Agent
-from coroutines.collector import make_collector, NumToCollect
-from data import BatchSampler, collate_segments_to_batch, Dataset, DatasetTraverser, CSGOHdf5Dataset
-from envs import make_atari_env, WorldModelEnv
-from utils import (
+from .agent import Agent
+from .coroutines.collector import make_collector, NumToCollect
+from .data import BatchSampler, collate_segments_to_batch, Dataset, DatasetTraverser, CSGOHdf5Dataset
+from .envs import make_atari_env, WorldModelEnv
+from .utils import (
 	broadcast_if_needed,
 	build_ddp_wrapper,
 	CommonTools,

@@ -8,8 +8,8 @@ import torch
 from torch.distributed import init_process_group, destroy_process_group
 import torch.multiprocessing as mp
 
-from trainer import Trainer
-from utils import skip_if_run_is_over
+from .trainer import Trainer
+from .utils import skip_if_run_is_over
 import json
 
 

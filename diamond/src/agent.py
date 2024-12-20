@@ -5,11 +5,11 @@ from typing import Optional, Union
 import torch
 import torch.nn as nn
 
-from envs import TorchEnv, WorldModelEnv
-from models.actor_critic import ActorCritic, ActorCriticConfig, ActorCriticLossConfig
-from models.diffusion import Denoiser, DenoiserConfig, SigmaDistributionConfig
-from models.rew_end_model import RewEndModel, RewEndModelConfig
-from utils import extract_state_dict
+from .envs import TorchEnv, WorldModelEnv
+from .models.actor_critic import ActorCritic, ActorCriticConfig, ActorCriticLossConfig
+from .models.diffusion import Denoiser, DenoiserConfig, SigmaDistributionConfig
+from .models.rew_end_model import RewEndModel, RewEndModelConfig
+from .utils import extract_state_dict
 
 
 @dataclass

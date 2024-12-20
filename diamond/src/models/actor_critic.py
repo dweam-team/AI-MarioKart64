@@ -10,9 +10,9 @@ from torch.distributions.categorical import Categorical
 import torch.nn.functional as F
 
 from .blocks import Conv3x3, SmallResBlock
-from coroutines.env_loop import make_env_loop
-from envs import TorchEnv, WorldModelEnv
-from utils import init_lstm, LossAndLogs
+from ..coroutines.env_loop import make_env_loop
+from ..envs import TorchEnv, WorldModelEnv
+from ..utils import init_lstm, LossAndLogs
 
 
 ActorCriticOutput = namedtuple("ActorCriticOutput", "logits_act val hx_cx")
