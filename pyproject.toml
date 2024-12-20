@@ -5,6 +5,8 @@ description = ""
 authors = ["Your Name <you@example.com>"]
 include = [
     "config/**",
+    "thumbnails/**",
+    "dweam.toml",
 ]
 
 [tool.poetry.dependencies]
