@@ -1,0 +1,16 @@
+type = "Diamond"
+entrypoint = "diamond_mariokart.dweam_game:MarioKartGame"
+repo_link = "https://github.com/Dere-Wah/AI-MarioKart64"
+thumbnail_dir = "thumbnails"
+
+# Game-specific metadata
+[games.mk64]
+title = "Mario Kart 64"
+tags = ["Racing"]
+description = "Mario Kart 64"
+
+[games.mk64.buttons]
+"⬅️ Left" = "Arrow Left"
+"➡️ Right" = "Arrow Right"
+"🍄 Use Item" = "D"
+"🔄 Restart" = "Enter"
