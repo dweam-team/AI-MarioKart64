@@ -1,7 +1,0 @@
-train:
-  id: lr
-  size: [320, 240]
-num_actions: 22
-path_data_low_res: C:\Users\ifrat\Documents\AI-SM64\MarioKart\colab-diamond-csgo\processed\low_res
-path_data_full_res: C:\Users\ifrat\Documents\AI-SM64\MarioKart\colab-diamond-csgo\processed\full_res
-keymap: mk64
