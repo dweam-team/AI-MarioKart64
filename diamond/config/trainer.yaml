@@ -82,7 +82,7 @@ denoiser:
     eps: 1e-8
   
   sigma_distribution: # log normal distribution for sigma during training
-    _target_: models.diffusion.SigmaDistributionConfig
+    _target_: diamond_mariokart.models.diffusion.SigmaDistributionConfig
     loc: -1.2
     scale: 1.2
     sigma_min: 2e-3

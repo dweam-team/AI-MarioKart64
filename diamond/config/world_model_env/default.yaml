@@ -1,8 +1,8 @@
-_target_: envs.WorldModelEnvConfig
+_target_: diamond_mariokart.envs.WorldModelEnvConfig
 horizon: 1000
 num_batches_to_preload: 256
 diffusion_sampler_next_obs:
-  _target_: models.diffusion.DiffusionSamplerConfig
+  _target_: diamond_mariokart.models.diffusion.DiffusionSamplerConfig
   num_steps_denoising: 3
   sigma_min: 2e-3
   sigma_max: 5.0
@@ -14,7 +14,7 @@ diffusion_sampler_next_obs:
   s_noise: 1.0
   s_cond: 0.005
 diffusion_sampler_upsampling:
-  _target_: models.diffusion.DiffusionSamplerConfig
+  _target_: diamond_mariokart.models.diffusion.DiffusionSamplerConfig
   num_steps_denoising: 10
   sigma_min: 1
   sigma_max: 5.0

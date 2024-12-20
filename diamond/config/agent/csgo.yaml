@@ -1,13 +1,13 @@
-_target_: agent.AgentConfig
+_target_: diamond_mariokart.agent.AgentConfig
 
 denoiser:
-  _target_: models.diffusion.DenoiserConfig
+  _target_: diamond_mariokart.models.diffusion.DenoiserConfig
   sigma_data: 0.5
   sigma_offset_noise: 0.1
   noise_previous_obs: true
   upsampling_factor: null
   inner_model:
-    _target_: models.diffusion.InnerModelConfig
+    _target_: diamond_mariokart.models.diffusion.InnerModelConfig
     img_channels: 3
     num_steps_conditioning: 4
     cond_channels: 2048
@@ -28,13 +28,13 @@ denoiser:
     - 1
 
 upsampler:
-  _target_: models.diffusion.DenoiserConfig
+  _target_: diamond_mariokart.models.diffusion.DenoiserConfig
   sigma_data: 0.5
   sigma_offset_noise: 0.1
   noise_previous_obs: false
   upsampling_factor: 5
   inner_model:
-    _target_: models.diffusion.InnerModelConfig
+    _target_: diamond_mariokart.models.diffusion.InnerModelConfig
     img_channels: 3
     num_steps_conditioning: 1
     cond_channels: 2048
