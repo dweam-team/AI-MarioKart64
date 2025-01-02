@@ -85,6 +85,7 @@ def prepare_env(cfg: DictConfig, device: torch.device, model_name: str) -> tuple
 class MarioKartGame(Game):
     class Params(Game.Params):
         denoising_steps: int = Field(default=10, description="Less steps means faster generation, but less accurate")
+        context_window: int = Field(default=4, le=4, ge=1, description="Number of frames to remember when generating the next frame")
 
     def on_params_update(self, new_params: Params) -> None:
         super().on_params_update(new_params)
@@ -132,6 +133,18 @@ class MarioKartGame(Game):
             keys=[k for k in self.keys_pressed if k in CSGO_KEYMAP],
             steering_value=steering_value,
         )
+
+        # Apply context window by zeroing out old observations/actions
+        wm_env = self.env.env
+        context_size = wm_env.sampler_next_obs.denoiser.cfg.inner_model.num_steps_conditioning
+        window_size = min(self.params.context_window, context_size)
+        
+        # Zero out observations/actions beyond the context window
+        if window_size < context_size:
+            wm_env.obs_buffer[:, :context_size-window_size] = 0
+            wm_env.act_buffer[:, :context_size-window_size] = 0
+            if wm_env.obs_full_res_buffer is not None:
+                wm_env.obs_full_res_buffer[:, :context_size-window_size] = 0
 
         # Step the environment with CSGO action
         next_obs, rew, end, trunc, info = self.env.step(action)
